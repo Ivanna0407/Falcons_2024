@@ -32,7 +32,7 @@ public class RobotContainer {
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the trigger bindings
-    Chasis.setDefaultCommand(new Chasis_move_cmd(Chasis,() -> Joy_drive.getRightTriggerAxis() , ()-> Joy_drive.getLeftTriggerAxis()));
+    Chasis.setDefaultCommand(new Chasis_move_cmd(Chasis, () -> Joy_drive.getRightTriggerAxis(),() -> Joy_drive.getLeftTriggerAxis(), () -> Joy_drive.getLeftX(), () -> Joy_drive.b().getAsBoolean()));
     configureBindings();
   }
 
