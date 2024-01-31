@@ -32,7 +32,7 @@ public class Chasis_move_cmd extends Command {
   @Override
   public void execute() {
     double speed_R,speed_L,Trigger,Turn,Boost;
-    Trigger=LT.get()-RT.get(); if (Math.abs(Trigger)<.15){Trigger=0;}
+    Trigger=RT.get()-LT.get(); if (Math.abs(Trigger)<.15){Trigger=0;}
     Turn=XAxis.get();if(Math.abs(Turn)<0.25){Turn = 0;}
     if (Bbutton.get()){Boost=0.5;}else{Boost=1;}
     speed_L= (Trigger-Turn)*Boost;
